@@ -6,9 +6,9 @@ function App() {
   const userData = { name: "Jane Doe", email: "jane.doe@gmail.com" };
 
   return (
-    <DataContext.Provider value={userData}>
+    <UserContext.Provider value={userData}>
       <ProfilePage/>
-    </DataContext.Provider>
+    </UserContext.Provider>
   );
 }
 
