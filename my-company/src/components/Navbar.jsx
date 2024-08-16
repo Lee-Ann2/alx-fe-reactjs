@@ -6,6 +6,8 @@ function Navbar() {
     <> 
         <nav>
             <div style={{
+                backgroundColor: 'magenta',
+                display: "inline-block",
                 padding: "20px",
                 listStyle: "none",
                 textTransform: "none",
