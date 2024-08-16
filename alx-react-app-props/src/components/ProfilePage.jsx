@@ -1,3 +1,4 @@
+import UserContext from './UserContext';
 import UserInfo from './UserInfo';
 
 function ProfilePage({userData}) {
