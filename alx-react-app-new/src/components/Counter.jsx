@@ -1,16 +1,16 @@
 import { userState } from 'react';
 
 function Counter() {
-    const [count, setCount] = userState(0);
+    const [count, setCount] = useState(0);
 
     return (
-        <div>
-            <P>Current Count: {count}</P>
-            <button onClick={() => setCount(count + 1)}>Increment</button>
-            <button onClick={() => setCount(count - 1)}>Decrement</button>
-            <button onClick={() => setCount(0)}>Reset</button>
-        </div>
-    )
+        <>
+         <p>Current Count: {count}</p>
+         <button onClick={() => setCount(count + 1)}>Increment</button>
+         <button onClick={() => setCount(count - 1)}>Decrement</button>
+         <button onClick={() => setCount(0)}>Reset</button>
+        </>
+    );
 }
 
 export default Counter;
