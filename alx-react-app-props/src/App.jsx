@@ -1,4 +1,4 @@
-import userContext from "react"
+import UserContext from "./components/UserContext";
 import ProfilePage from "./components/ProfilePage";
 import UserDetails from './components/UserDetails';
 
