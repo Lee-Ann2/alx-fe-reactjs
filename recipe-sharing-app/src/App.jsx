@@ -10,6 +10,8 @@ function App() {
       <div>
         <h1>Recipes</h1>
         <AddRecipeForm />
+        <FavoritesList />
+        <RecommendationList />
         <Routes>
           <Route path="/" element={<RecipeList />} />
           <Route path="/recipe/:recipeId" element={<RecipeDetails />} />
