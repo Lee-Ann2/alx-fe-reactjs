@@ -32,25 +32,17 @@ const RecipeList = () => {
         <SearchBar />
         {recipes.map((recipe) => (
           <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
             key={recipe.id}
           >
             <h3>{recipe.title}</h3>
             <p>{recipe.description}</p>
             <Link to={`/details/${recipe.id}`}>More Details</Link>
             <button
-              style={{
-                width: "fit-content",
-              }}
               onClick={() => toggleButton(recipe.id)}
             >
               {favorites.includes(recipe.id)
                 ? "Remove from Favorites"
-                : "Add to Favorites"}
+                : "Favorites"}
             </button>
           </div>
         ))}
