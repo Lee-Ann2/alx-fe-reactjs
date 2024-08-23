@@ -13,7 +13,15 @@ const AddRecipeForm = () => {
     setTitle('');
     setDescription('');
   };
-
+  const handleDelete = (event) => {
+    deleteRecipe(recipe.id)
+    navigate('/');
+  };
+  const updateRecipe = useRecipeStore(state => state.updateRecipe);
+  const handleEdit = (event) => {
+    event.preventDefault();
+    updateRecipe({ id: recipe.id, title, description });
+  };
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -28,6 +36,8 @@ const AddRecipeForm = () => {
         placeholder="Description"
       />
       <button type="submit">Add Recipe</button>
+      <button onClick={handleDelete}>Delete</button>
+      <button onClick={{handleEdit}}>Edit</button>
     </form>
   );
 };

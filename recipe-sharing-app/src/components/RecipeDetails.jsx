@@ -7,18 +7,10 @@ const RecipeDetails = ({ recipeId }) => {
     state.recipes.find(recipe => recipe.id === recipeId)
   );
   if (!recipe) {
-    return <p>Recipe not found</p>;
+    return <p>No receipe</p>;
   }
 
-  const handleDelete = (event) => {
-    deleteRecipe(recipe.id)
-    navigate('/');
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    updateRecipe({ id: recipe.id, title, description });
-  };
+  
 
   return (
     
