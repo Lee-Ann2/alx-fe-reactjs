@@ -11,7 +11,8 @@ const RecommendationList = () => {
 
   return (
     <div>
-      <h2>Recommendations</h2>
+      <h1>Hello world</h1>
+      <h2>Recommendations!!</h2>
       {recommendations.length > 0 ? (
         recommendations.map((recipe) => (
           <div key={recipe.id}>
@@ -20,7 +21,7 @@ const RecommendationList = () => {
           </div>
         ))
       ) : (
-        <p>Recommendations not available at the moment.</p>
+        <p>Recommendations not found try again later</p>
       )}
     </div>
   );
