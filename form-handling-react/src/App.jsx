@@ -1,13 +1,15 @@
 import RegistrationForm from './components/RegistrationForm'
-import './App.css'
+import FormikForm from './components/FormikForm';
+import './App.css';
 
 function App() {
 
   return (
     <>
       <RegistrationForm />
+      <FormikForm />
     </>
   )
-}
+};
 
-export default App
+export default App;

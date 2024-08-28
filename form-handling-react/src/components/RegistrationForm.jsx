@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FormikForm from "./FormikForm";
 
 const ControlledForm = () => {
     const [formData, setFormData] = useState({name: '', email: '', password: ''});
