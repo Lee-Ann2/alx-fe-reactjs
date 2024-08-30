@@ -8,7 +8,7 @@ function Profile() {
       <div>Profile</div>
       <nav>
         <Link to="details">Profile Deets</Link>
-        <Link to="settings">Profile Settings</Link>
+        <Link to="settings">Settings</Link>
       </nav>
       <Routes>
         <Route path="details" element={<ProfileDetails />} />
