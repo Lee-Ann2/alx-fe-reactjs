@@ -1,5 +1,4 @@
 import { useState } from "react";
-import FormikForm from "./FormikForm";
 
 const ControlledForm = () => {
     const [formData, setFormData] = useState({name: '', email: '', password: ''});
@@ -19,19 +18,19 @@ const ControlledForm = () => {
             <input
             type="text"
             name="name"
-            value={formData.name}
+            value={username}
             onChange={handleChange}
             />
             <input
             type="email"
             name="email"
-            value={formData.email}
+            value={email}
             onChange={handleChange}
             />
             <input
             type="password"
             name="password"
-            value={formData}
+            value={password}
             onChange={handleChange}
             />
             <button type="submit">Submit</button>
