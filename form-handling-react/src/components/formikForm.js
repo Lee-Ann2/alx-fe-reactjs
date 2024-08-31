@@ -2,9 +2,9 @@ import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 const validationSchema = Yup.object({
-    name: Yup.string().required('Name is a Fuckin must'),
-    email: Yup.string().email('Invalid Babe try again').required('Email is required Sweethear'),
-    paasword: Yup.string().password('Wrong password bitch').required('Password is required')
+    name: Yup.string().required('Name is required'),
+    email: Yup.string().email('Invalid try again').required('Email is required'),
+    paasword: Yup.string().password('Wrong password').required('Password is required')
 });
 
 

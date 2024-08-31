@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import useMessageStore from '../store/useMessageStore';
 
-function Taskkbar() {
+function Taskbar() {
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
 
@@ -29,4 +29,4 @@ function Taskkbar() {
   );
 }
 
-export default Taskkbar;
+export default Taskbar;

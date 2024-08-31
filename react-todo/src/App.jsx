@@ -1,6 +1,4 @@
-import TodokList from './components/TodoList';
 import AddTodoForm from './components/AddTodoForm';
-import Taskbar from './components/Taskbar';
 
 const App = () => {
   return (

@@ -1,6 +1,6 @@
 import useTaskStore from '../store/useTaskStore';
 
-const TaskList = () => {
+const TodoList = () => {
   const { tasks, removeTask, toggleTask } = useTaskStore();
 
   return (
