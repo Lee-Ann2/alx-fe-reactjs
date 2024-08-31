@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import useTaskStore from '../store/useTaskStore';
 
 const TodoList = () => {
+  const [text, setText] = useState('');
   const { tasks, removeTask, toggleTask } = useTaskStore();
 
   return (
