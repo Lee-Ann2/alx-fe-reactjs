@@ -4,6 +4,7 @@ import RecipeDetails from "./components/RecipeDetails";
 import RecipeList from "./components/RecipeList";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RecommendationsList from "./components/RecommendationsList";
+import HomePage from "./components/HomePage";
 function App() {
   return (
     <>
@@ -12,11 +13,12 @@ function App() {
           <Route
             path="/"
             element={
-              <>
+              <> 
+                <HomePage />
                 <RecipeList />
                 <AddRecipeForm />
                 <FavoritesList />
-                <RecommendationList />
+                <RecommendationsList />
               </>
             }
           />
