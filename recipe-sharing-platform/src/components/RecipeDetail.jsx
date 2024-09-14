@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 function RecipeDetail() {
   const { id } = useParams();
   const [recipe, setRecipe] = useState([]);
-  //   const details = data.find((recipe) => recipe.id === +id);
 
   useEffect(() => {
     const recipeDetails = data.find((recipe) => recipe.id === +id);
