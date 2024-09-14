@@ -1,7 +1,9 @@
 import data from "../data.json";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 function AddRecipeForm() {
+  const { id } = useParams();
   const [recipes, setRecipes] = useState(data);
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");

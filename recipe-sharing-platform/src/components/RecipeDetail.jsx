@@ -13,7 +13,7 @@ function RecipeDetail() {
   }, [id]);
 
   return (
-    <div className="sm:items-center sm:p-4 bg-pink-200 sm:m-24 md:32 rounded shadow-xl"
+    <div className="sm:items-center sm:p-4 bg-pink-200 sm:m-24 md:32 rounded shadow-xl "
       key={recipe.id}
     >
       <img src={recipe.image} alt={recipe.title} className="m-auto py-8 " />
