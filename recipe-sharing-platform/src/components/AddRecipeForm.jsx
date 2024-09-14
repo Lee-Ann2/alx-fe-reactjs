@@ -48,7 +48,7 @@ function AddRecipeForm() {
   };
 
   return (
-    <div>
+    <div className="md:text-center shadow-lx p-8">
       <form
         onSubmit={handleSubmit}
       >
@@ -92,7 +92,7 @@ function AddRecipeForm() {
         {errors.steps && <span>{errors.steps}</span>}
         <button
           type="submit"
-          className="bg-pink-300 rounded hover:bg-pink-500 text-white font-light"
+          className="bg-pink-300 rounded hover:bg-pink-500 text-white font-light shadow:lx"
         >
           Add Recipe
         </button>
