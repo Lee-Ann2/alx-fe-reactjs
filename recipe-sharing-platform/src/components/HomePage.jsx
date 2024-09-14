@@ -10,7 +10,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="p-6 m-10 bg-pink-200 rounded sm:items-center md:items-center hover:bg-pink-500 shadow-md grid grid-col-1 grid-col-2 grid-col-3" >
+    <div className="p-6 m-10 bg-pink-200 rounded sm:items-center md:items-center hover:bg-pink-500 shadow-md grid grid-cols-1 grid-cols-2 grid-cols-3" >
       {recipes?.map((recipe) => (
         <Link to={`/recipe/${recipe.id}`}>
           <div
