@@ -1,73 +1,32 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import data from "../data.json";
 
-const RecipeList = () => {
-  const recipes = useRecipeStore((state) => state.recipes);
-  const {
-    searchTerm,
-    filterRecipes,
-    filteredRecipes,
-    favorites,
-    addFavorite,
-    removeFavorite,
-  } = useRecipeStore();
+const HomePage = () => {
+  const [recipes, setRecipes] = useState();
 
   useEffect(() => {
-    filterRecipes();
-  }, [searchTerm, filterRecipes]);
+    setRecipes(data);
+  }, []);
 
-  const toggleButton = (recipeId) => {
-    if (favorites.includes(recipeId)) {
-      removeFavorite(recipeId);
-    } else {
-      addFavorite(recipeId);
-    }
-  };
-
-  if (searchTerm === "") {
-    return (
-      <div>
-        <SearchBar />
-        {recipes.map((recipe) => (
+  return (
+    <div className="p-6 m-10 bg-pink-200 rounded sm:items-center md:items-center">
+      {recipes?.map((recipe) => (
+        <Link to={`/recipe/${recipe.id}`}>
           <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
             key={recipe.id}
           >
-            <h3>{recipe.title}</h3>
-            <p>{recipe.description}</p>
-            <Link to={`/details/${recipe.id}`}>More Details</Link>
-            <button
-              style={{
-                width: "fit-content",
-              }}
-              onClick={() => toggleButton(recipe.id)}
-            >
-              {favorites.includes(recipe.id)
-                ? "Remove from Favorites"
-                : "Favorites"}
-            </button>
+            <img
+              src={recipe.image}
+              className="sm:bg-center"
+            />
+            <h1 className="font-bold text-green-700 sm:text-center">{recipe.title}</h1>
+            <p className="font-light text-green-500 sm:text-center">{recipe.summary}</p>
           </div>
-        ))}
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <SearchBar />
-        {filteredRecipes.map((recipe) => (
-          <div key={recipe.id}>
-            <h3>{recipe.title}</h3>
-            <p>{recipe.description}</p>
-            <Link to={`/details/${recipe.id}`}>More Details</Link>
-          </div>
-        ))}
-      </div>
-    );
-  }
+        </Link>
+      ))}
+    </div>
+  );
 };
 
 export default HomePage;
