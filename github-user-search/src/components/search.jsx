@@ -1,8 +1,9 @@
+import React, { useState } from 'react';
+import { fetchUserData } from '../services/githubService';
+
 const API_URL = 'https://api.github.com/search/users';
 const TOKEN = 'YOUR_GITHUB_TOKEN_HERE';
 
-import React, { useState } from 'react';
-import { fetchUserData } from '../services/githubService';
 
 const Search = () => {
   const [username, setUsername] = useState('');
@@ -46,7 +47,7 @@ const Search = () => {
       </form>
 
       {loading && <p className="text-center mt-4 text-[#674188]">Loading...</p>}
-      {error && <p className="text-center text-red-500 mt-4">User not found</p>}
+      {error && <p className="text-center text-red-500 mt-4">Looks like we cant find the user</p>}
 
       {userData.length > 0 && (
         <div className=" items-center m-3">
