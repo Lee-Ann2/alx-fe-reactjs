@@ -8,6 +8,8 @@ const TOKEN = 'YOUR_GITHUB_TOKEN_HERE';
 const Search = () => {
   const [username, setUsername] = useState('');
   const [userData, setUserData] = useState([]);
+  const [location, setLocation] = useState('');
+  const [minRepos, setMinRepos] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -16,9 +18,11 @@ const Search = () => {
     setLoading(true);
     setError(false);
     try {
-      const data = await fetchUserData(username,);
+      const data = await fetchUserData(username, location, minRepos);
       setUserData(data.items || []);
       setUsername('');
+      setLocation('');
+      setMinRepos('');
     } catch (err) {
       setError(true);
       setUserData([]);
@@ -59,6 +63,8 @@ const Search = () => {
                 className="w-20 h-20 rounded-full mx-auto"
               />
               <h3 className="text-center mt-4 text-lg font-semibold text-[#C8A1E0]">{user.login}</h3>
+              <h4 className="text-center text-[#C8A1E0]">{user.location || 'No live location'}</h4>
+              <h4 className="text-center text-[#C8A1E0]">Repositories: {user.public_repos || 'Unkown'}</h4>
               <a
                 href={user.html_url}
                 target="_blank"
