@@ -2,7 +2,7 @@ const API_URL = 'https://api.github.com/search/users';
 const TOKEN = 'YOUR_GITHUB_TOKEN_HERE';
 
 import React, { useState } from 'react';
-import { fetchUserData } from '../services/service';
+import { fetchUserData } from '../services/githubService';
 
 const Search = () => {
   const [username, setUsername] = useState('');
